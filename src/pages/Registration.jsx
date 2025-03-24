@@ -6,6 +6,8 @@ import { OrbitControls } from "@react-three/drei";
 // import BoxWrapper from "./Closed";
 // import "./Page2.css";
 
+
+
 function Registration() {
   return (
     <div id="register" className="absolute min-h-screen py-16 bg-[#2b4bff50] z-50 flex items-center md:justify-center flex-col gap-[9vh]"  style={{width:"100%",bottom:"0%"}}>
