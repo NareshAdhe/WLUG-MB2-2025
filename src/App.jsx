@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-
+import RegisterForm from "./components/RegisterForm";
+import Registration from "./pages/Registration";
+import Footer from "./components/Footer"
 function App() {
   const [scrollY, setScrollY] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,6 +31,7 @@ function App() {
   };
 
   return (
+    <>
     <div className="bg-black min-h-[300vh] w-full text-white relative overflow-hidden">
       {/* Night Sky */}
       <img 
@@ -52,7 +55,7 @@ function App() {
           width: window.innerWidth <= 473 && window.innerHeight <= 857 ? "150px" : undefined,
         }}
       />
-
+      
       {/* Mountain One */}
       <img 
         src="src/assets/maountain_one.png" 
@@ -126,6 +129,8 @@ function App() {
         />
 
 
+      <div className="">
+
         <img src="src/assets/vally_one.png" alt="" className="absolute z-[1000] "
         style={{
           top: window.innerWidth <= 473 && window.innerHeight <= 857 ? "27%" : "44%",
@@ -141,13 +146,24 @@ function App() {
             height: window.innerWidth <= 473 && window.innerHeight <= 857 ? "30%" : "50%",
             left: window.innerWidth <= 473 && window.innerHeight <= 857 ? "-70%" : "-21%",
             transform: window.innerWidth <= 473 && window.innerHeight <= 857 ?`translateX(${Math.min(30, (getTransformX(0.09)))}%)` : `translateX(${Math.min(40, (getTransformX(0.05)))}%)`,
-        }}   
-        />
+          }}   
+          />
      
       
+      {/* Registration Form */}
+      <div className="absolute bottom-30 z-3000" style={{width:"100%"}}>
 
+      {/* <RegisterForm/> */}
+      <Registration/>
+      </div>
 
+      </div>
+
+      {/* <Footer/> */}
+    
     </div>
+    
+</>
   );
 }
 
